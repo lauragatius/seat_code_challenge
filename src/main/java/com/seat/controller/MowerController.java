@@ -1,6 +1,7 @@
 package com.seat.controller;
 
 import com.seat.entity.Mower;
+import com.seat.entity.Plateau;
 
 public class MowerController {
 	
@@ -17,8 +18,7 @@ public class MowerController {
 	public static void proccessPosition(String position, Mower m) {
 		int x = Integer.parseInt(position.substring(0, 1));
 		int y = Integer.parseInt(position.substring(2, 3));
-		String orientation = position.substring(4);
-		
+		String orientation = position.substring(4);		
 		m.setX(x);
 		m.setY(y);
 		m.setOrientation(orientation);
@@ -125,4 +125,5 @@ public class MowerController {
 	public static void printPosition(Mower m) {
 		System.out.println(m.getX() + " " + m.getY()+ " "  + m.getOrientation());
 	}
+	
 }
